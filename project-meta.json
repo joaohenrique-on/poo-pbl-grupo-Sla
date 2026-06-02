@@ -1,0 +1,11 @@
+{
+  "curso": "Ciência da Computação",
+  "disciplina": "Projeto de Programação",
+  "tema_escolhido": "Em escolha",
+  "linguagem": "Java",
+  "gerenciador_dependencias": "Maven",
+  "integrantes": [
+    {"nome": "João Henrique", "github_username": "joaohenrique-on"},
+    {"nome": "Nome Aluno 2", "github_username": "user2"}
+  ]
+}
