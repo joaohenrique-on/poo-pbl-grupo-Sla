@@ -1,6 +1,6 @@
-package dev.java10x.ProjetoDDD.domain.doaçao;
+package dev.java10x.ProjetoDDD.domain;
 
-public class verificarvalorvalido {
+public class doaçao {
 
     public boolean validar(double valor) {
         return valor > 0;
@@ -9,8 +9,8 @@ public class verificarvalorvalido {
     public String mensagem(double valor) {
         if (validar(valor)) {
             return "Valor válido para doação";
+        } else {
+            return "Valor inválido: deve ser maior que zero";
         }
-        return "Valor inválido: deve ser maior que zero";
     }
 }
-

@@ -1,0 +1,68 @@
+import lombok.*;
+
+public class Campanha {
+
+    private final @Getter String campanhaId;
+    private @Getter @Setter String campanhaNome;
+    private @Getter @Setter boolean ativa;
+    private @Getter @Setter double objetivo;
+    private @Getter @Setter double totalRecebido;
+        
+        //Construtor
+        public Campanha(String campanhaId, String campanhaNome, double objetivo) {
+        if (campanhaId == null || campanhaId.isBlank()) {
+            throw new IllegalArgumentException("ID da campanha não pode ser vazio");
+        }
+        if (campanhaNome == null || campanhaNome.isBlank()) {
+            throw new IllegalArgumentException("Nome da campanha não pode ser vazio");
+        }
+    
+        this.campanhaId = campanhaId;
+        this.campanhaNome = campanhaNome;
+        this.objetivo = objetivo;
+        this.ativa = true;
+        this.totalRecebido = 0.0;
+    }
+    
+    //Abrir e fechar campanha
+    public void abrirCampanha() {
+        ativa = true;
+    }
+    public void fecharCampanha() {
+        ativa = false;
+    }
+    
+    //Encerrar campanha
+    public String encerrarCampanha(String nomeCampanha, boolean estaAtiva) {
+        if (nomeCampanha == null || nomeCampanha.isBlank()) {
+            throw new IllegalArgumentException("Nome da campanha não pode ser vazio");
+        }
+        if (!estaAtiva) {
+            return "Campanha já estava encerrada";
+        }
+        fecharCampanha();
+        return "Campanha '" + nomeCampanha + "' encerrada com sucesso";
+    }
+    
+    //Bateu Meta
+    public String bateuMeta(double totalRecebido, double objetivo) {
+        if (totalRecebido >= objetivo) {
+            return "Meta atingida";
+        } else {
+            return "Meta ainda não foi atingida";
+        }
+    }
+        
+        //Recebeu Doação
+        public void receber(double valor) {
+          if (!ativa) {
+              throw new IllegalStateException("Campanha inativa não pode receber doações");
+          }
+        totalRecebido += valor;
+        }
+    
+    //Satus Campanha
+    public String statusCampanha(boolean ativa) {
+        return ativa ? "Ativa" : "Inativa";
+    }
+}
