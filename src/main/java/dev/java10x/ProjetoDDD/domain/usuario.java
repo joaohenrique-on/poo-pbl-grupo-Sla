@@ -1,45 +1,42 @@
 package dev.java10x.ProjetoDDD.domain;
 
-import lombok.*;
-<<<<<<< HEAD
-
 public class Usuario {
 
-    private final @Getter String id;
-    private @Getter @Setter String nome;
+    private final String id;
+    private String nome;
 
-    public Usuario(String id,String nome) {
-=======
-
-public class usuario {
-
-    private final @Getter String id;
-    private @Getter @Setter String nome;
-
-    public usuario(String id,String nome) {
->>>>>>> 6ba1ade72d070222e8ec76ee16f41cb66793e534
-
+    public Usuario(String id, String nome) {
+        if (id == null || id.isBlank()) {
+            throw new IllegalArgumentException("ID do usuário não pode ser vazio");
+        }
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("Nome do usuário não pode ser vazio");
+        }
         this.id = id;
         this.nome = nome;
     }
 
-    public Doacao realizarDoacao(Campanha campanha, double valor) {
+    // Métodos manuais que o VS Code lê sem precisar da extensão ativa
+    public String getId() {
+        return this.id;
+    }
 
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Doacao realizarDoacao(Campanha campanha, double valor) {
         if (valor <= 0) {
             throw new IllegalArgumentException("Valor inválido");
         }
 
         Doacao doacao = new Doacao(this, valor);
-
-<<<<<<< HEAD
         campanha.receberdoacao(doacao);
-=======
-        campanha.receberDoacao(doacao);
->>>>>>> 6ba1ade72d070222e8ec76ee16f41cb66793e534
 
         return doacao;
     }
 }
-
-
-    
