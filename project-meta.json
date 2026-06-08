@@ -8,4 +8,128 @@
     {"nome": "João Henrique", "github_username": "joaohenrique-on"},
     {"nome": "German antonio", "github_username": "germancabral8966-source"}
   ]
+
 }
+
+commit 796abc58099c6aac62f22b777d9d522112e538c4 (HEAD -> master, origin/master, origin/HEAD)
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 14:52:40 2026 -0300
+
+    mambo mambo :D
+
+commit d5a33d3e767818a7c99f386c03523b85877924a8
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 14:50:49 2026 -0300
+
+    mambo :D
+
+commit 7f9622adae6f317717cbc2ef0bba212f63e25b8f
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 11:00:27 2026 -0300
+
+    correçao de bugs
+
+commit 228bf6a30f6016401320be383e1cea6fc25159f4
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 10:29:47 2026 -0300
+
+    agora sim vai tudo
+
+commit 462398bc62e4e45f89e17c8127b65392568fa780
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 10:16:07 2026 -0300
+
+    atualizado
+
+commit 2824b94dbee8565a1afce5ff5fa9c4e08c3ad57c
+Merge: 15d44d4 6ba1ade
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 10:12:52 2026 -0300
+
+    agora vai
+
+commit 15d44d4ad9fa0bdc9c35c694b47ffafcbbe7eff0
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 10:09:57 2026 -0300
+
+    agora vai
+
+commit e0b7b8f1ceb91453109b3212bf8616cd0aded6eb
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Mon Jun 8 08:00:50 2026 -0300
+
+    atualizaçao 1.21 xD
+
+commit 6ba1ade72d070222e8ec76ee16f41cb66793e534
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Sun Jun 7 17:47:57 2026 -0300
+
+    Alterações em doação
+
+commit f11e141165b3ee1d07b79d932b137bc37641b094
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Sun Jun 7 17:39:52 2026 -0300
+
+    Tinha escrito errado
+
+commit e1d29a802d9c8cf0223f8c24e9ac13177ec13927
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Sun Jun 7 17:35:04 2026 -0300
+
+    Mudanças Usuário
+
+commit a70b2bb5bd2997bf6780a42da85e68f066e0b0c4
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Sat Jun 6 23:06:32 2026 -0300
+
+    Ryoiky Tenkai
+
+commit 0d0e72f44b2408a24d4afbff55f3bc946cf78b7d
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Sat Jun 6 05:39:52 2026 -0300
+
+    expansao de dominio
+
+commit bc85cca234c2d19e58b8ac402546598ae94d1b5a
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Fri Jun 5 18:05:18 2026 -0300
+
+    agora simm
+
+commit 7f7cee2e5396097425de979bffd2dedb113c40cf
+Author: germancabral8966-source <german.cabral8966@gmail.com>
+Date:   Fri Jun 5 17:56:27 2026 -0300
+
+    nova tentativa
+
+commit a579763d084432cfb93f66c585db0ac950963f39
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Tue Jun 2 18:02:43 2026 -0300
+
+    testando2
+
+commit 882cf0aa43e6a85c2995cffdd6c8fc217ee03fc1
+Merge: 1cc1845 b58afc4
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Tue Jun 2 17:54:13 2026 -0300
+
+    teste
+
+commit 1cc1845599f837b449d38226928199bbffc05377
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Tue Jun 2 17:50:45 2026 -0300
+
+    commit teste
+
+commit b58afc4405c47a3a61c2631cc3116588f6ea6bc2
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Tue Jun 2 17:41:35 2026 -0300
+
+    commit test
+
+commit 38877e5786ee4e055f82a2ae9eeccbd669f09c1e
+Author: joaohenrique-on <joaohenriquepvs@gmail.com>
+Date:   Tue Jun 2 17:29:19 2026 -0300
+
+    Primeiro Commit
+(END)

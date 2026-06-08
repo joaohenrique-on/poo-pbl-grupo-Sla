@@ -1,0 +1,9 @@
+dev\java10x\ProjetoDDD\domain\UsuarioRepository.class
+dev\java10x\ProjetoDDD\domain\Usuario$Recompensa.class
+dev\java10x\ProjetoDDD\domain\Campanha.class
+dev\java10x\ProjetoDDD\domain\Usuario$Doacao.class
+dev\java10x\ProjetoDDD\domain\Campanha$Doacao.class
+dev\java10x\ProjetoDDD\domain\Usuario.class
+dev\java10x\ProjetoDDD\domain\Usuario$Campanha.class
+dev\java10x\ProjetoDDD\infraestructure\UsuarioRepositoryMemoria.class
+dev\java10x\ProjetoDDD\domain\CampanhaRepository.class
