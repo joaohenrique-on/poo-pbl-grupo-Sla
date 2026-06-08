@@ -48,14 +48,14 @@ public class Campanha {
         }
     }
 
-    public String bateuMeta(double totalRecebido, double objetivo) {
-        if (totalRecebido >= objetivo) {
-            return "Meta atingida";
-        } else {
-            return "Meta ainda não foi atingida";
-        }
+    
+    public void encerrarCampanha() {
+        this.ativa = false;
     }
 
+    public boolean bateuMeta() {
+        return this.totalRecebido >= this.objetivo;
+    }
     
     public void receberdoacao(Doacao doacao) {
         if (doacao == null) {
@@ -78,7 +78,6 @@ public class Campanha {
         if (!ativa) {
             throw new IllegalStateException("Campanha inativa não pode receber doações");
         } else {
-            
             totalRecebido += valor;
         }
     }
@@ -106,4 +105,4 @@ public class Campanha {
     public String getId() {
         return campanhaId;
     }
-} 
+}

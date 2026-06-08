@@ -1,0 +1,118 @@
+
+
+//Application
+
+/CampanhaApplication
+
+package dev.java10x.ProjetoDDD.application;
+
+import dev.java10x.ProjetoDDD.domain.*;
+
+public class CampanhaApplication {
+
+    private final CampanhaRepository campanhaRepository;
+
+    public CampanhaApplication(CampanhaRepository campanhaRepository) {
+
+        this.campanhaRepository = campanhaRepository;
+    }
+
+    public Campanha criarCampanha(String id, String nome, double objetivo) {
+
+        Campanha campanha = new Campanha(id, nome, objetivo);
+
+        campanhaRepository.salvar(campanha);
+
+        return campanha;
+    }
+
+    public void mudarStatus(String campanhaId, boolean ativa) {
+
+        Campanha campanha = campanhaRepository.buscarPorId(campanhaId);
+
+        if (campanha == null) {
+            throw new IllegalArgumentException("Campanha não encontrada");
+        }
+
+        if (ativa) {
+            campanha.abrirCampanha();
+        } else {
+            campanha.encerrarCampanha();
+        }
+    }
+
+    public String visualizarStatus(String campanhaId) {
+
+        Campanha campanha = campanhaRepository.buscarPorId(campanhaId);
+
+        if (campanha == null) {
+            throw new IllegalArgumentException("Campanha não encontrada");
+        }
+
+        if (campanha.isAtiva()) {
+            return "Campanha ativa";
+        }
+
+        return "Campanha encerrada";
+    }
+
+    public String visualizarMeta(String campanhaId) {
+
+        Campanha campanha = campanhaRepository.buscarPorId(campanhaId);
+
+        if (campanha == null) {
+            throw new IllegalArgumentException("Campanha não encontrada");
+        }
+
+        if (campanha.bateuMeta()) {
+            return "Meta atingida";
+        }
+
+        return "Meta não atingida";
+    }
+}
+
+/DoacaoApplication
+
+package dev.java10x.ProjetoDDD.application;
+
+import dev.java10x.ProjetoDDD.domain.*;
+
+public class DoacaoApplication {
+
+    private final UsuarioRepository usuarioRepository;
+    private final CampanhaRepository campanhaRepository;
+
+    public DoacaoApplication(UsuarioRepository usuarioRepository, CampanhaRepository campanhaRepository) {
+
+        this.usuarioRepository = usuarioRepository;
+        this.campanhaRepository = campanhaRepository;
+    }
+
+    public Doacao realizarDoacao(String usuarioId, String campanhaId, double valor) {
+
+        Usuario usuario = usuarioRepository.buscarPorId(usuarioId);
+
+        if (usuario == null) {  
+             throw new IllegalArgumentException("Usuário não encontrado");
+        }
+
+        Campanha campanha = campanhaRepository.buscarPorId(campanhaId);
+
+        if (campanha == null) {
+            throw new IllegalArgumentException("Campanha não encontrada");
+        }
+
+        return usuario.realizarDoacao(campanha, valor);
+    }
+
+    public String reivindicarRecompensa(Recompensa recompensa, double valorDoado) {
+
+        if (recompensa.verificar(valorDoado)) {
+
+            return "Recompensa liberada: " + recompensa.getNome();
+        }
+
+        return "Valor insuficiente para receber " + recompensa.getNome();
+    }
+}
