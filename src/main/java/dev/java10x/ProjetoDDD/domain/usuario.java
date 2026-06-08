@@ -1,6 +1,19 @@
 package dev.java10x.ProjetoDDD.domain;
 
-public class usuario {
+public class Usuario {
+
+    private final String id;
+
+    public Usuario(String id) {
+        if (id == null || id.isBlank()) {
+            throw new IllegalArgumentException("ID do usuário não pode ser vazio");
+        }
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
 
     public Campanha criarCampanha(String id, String titulo, String descricao) {
         if (id == null || id.isBlank()) {

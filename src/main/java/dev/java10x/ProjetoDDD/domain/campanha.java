@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class campanha {
+public class Campanha {
 
     private final @Getter String campanhaId;
     private @Getter @Setter String campanhaNome;
@@ -14,7 +14,7 @@ public class campanha {
     private @Getter @Setter double totalRecebido;
     private final List<Doacao> doacoes = new ArrayList<>();
 
-    public campanha(String campanhaId, String campanhaNome, double objetivo) {
+    public Campanha(String campanhaId, String campanhaNome, double objetivo) {
         if (campanhaId == null || campanhaId.isBlank()) {
             throw new IllegalArgumentException("ID da campanha não pode ser vazio");
         }
@@ -90,6 +90,10 @@ public class campanha {
 
     public String statusCampanha() {
         return statusCampanha(this.ativa);
+    }
+
+    public String getId() {
+        return campanhaId;
     }
 
     public static class Doacao {
